@@ -2,20 +2,30 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-//==========HEADER SECTION==========
-//Hide Header when scrolls ======
-var prevScrollpos = window.pageYOffset;
+//==========HEADER SECTION==========//
+
+//Hide|Show Header ======
+var isUp;
+var isOver;
+function onMouseOverHeader(isOver_) {
+    isOver = isOver_;
+    if (isOver) document.getElementById("header").style.opacity = "1";
+    else if (!isOver && !isUp) document.getElementById("header").style.opacity = "0";
+
+    console.log ("IsUp: "+isUp +"  |  IsOver: "+isOver);
+}
 window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("header").style.opacity = "1";
-  } else {
-    document.getElementById("header").style.opacity = "0";
-  }
-  prevScrollpos = currentScrollPos;
+    currentScrollPos = window.pageYOffset;
+    if (50 > currentScrollPos) {
+      document.getElementById("header").style.opacity = "1";
+      isUp = true;
+    } else if (50 <= currentScrollPos && !isOver) {
+      document.getElementById("header").style.opacity = "0";
+      isUp = false;
+    }
 }
 
-//==========HOME SECTION==========
+//==========HOME SECTION==========//
 
 //Cycle Text ======
 const wordsList = [' Web Developer.', ' 2D Game Developer.', ' person.', ' 3D Game Developer.']
