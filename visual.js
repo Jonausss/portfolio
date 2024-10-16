@@ -11,8 +11,6 @@ function onMouseOverHeader(isOver_) {
     isOver = isOver_;
     if (isOver) document.getElementById("header").style.opacity = "1";
     else if (!isOver && !isUp) document.getElementById("header").style.opacity = "0";
-
-    console.log ("IsUp: "+isUp +"  |  IsOver: "+isOver);
 }
 window.onscroll = function() {
     currentScrollPos = window.pageYOffset;
