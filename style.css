@@ -120,21 +120,60 @@ section.about h1 {
 section.about p {
     font-size: 1.5vw;
 }
+/*ABOUT-IMAGE*/
 .about-img {
     height: 100%;
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    /*background-color: yellow;*/
 }
-.about-img img {
-    animation: floatImage 4s ease-in-out infinite;
+.about-img > * {
+    position: absolute;
 }
 @keyframes floatImage{
     0% {transform:translateY(0);}
     50% {transform:translateY(-0.8rem);}
     100% {transform:translateY(0);}
 }
+#aboutDice {
+    top: 15%;
+    left: 60%;
+}
+/*Dice*/
+.functional-dice {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.dice {
+    position: relative;
+    margin: 0px 20px;
+}
+.dice:hover {
+    cursor: pointer;
+}
+.dice img{
+    width: 5rem;
+    transition: 0.8s;
+}
+.dice span {
+    transition: 0.4s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-size: 1rem;
+    pointer-events: none;
+    position: absolute;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+}
+/*ABOUT-CONTENT*/
 .about-content {
     height: 100%;
     width: 60%;

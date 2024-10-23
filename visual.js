@@ -68,3 +68,21 @@ $(document).mousemove(function(event) {
         'background',
         'linear-gradient(0deg, #242424 0%, rgb(0, 0, 0, 0) 30%), radial-gradient(circle at ' + mouseXpercentage + '% 100%, rgba(0,142,255,0) 30%, rgba(163,29,175, 0.3) 100%)');
   });
+
+//==========ABOUT SECTION==========//
+function RollDice(diceNumber) 
+{
+    var diceImg = document.getElementById("d"+diceNumber+"Img");
+    var diceText = document.getElementById("d"+diceNumber+"Text")
+
+    diceImg.style.transform += "rotate(360deg)";
+
+    var randomNumber = parseInt((Math.random()*diceNumber)+1);
+    $(diceText).text(randomNumber);
+}
+
+for (child of document.getElementById("about-img").children) {
+    let randomTime = Math.floor(Math.random() * 5);
+    child.style.animation.animationDelay = toString(randomTime)+"s";
+    child.style.animation = "floatImage 4s linear infinite";
+}
