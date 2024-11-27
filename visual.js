@@ -5,7 +5,7 @@ function sleep(ms) {
 //==========HEADER SECTION==========//
 
 //Hide|Show Header ======
-var isUp;
+var isUp = true;
 var isOver;
 function onMouseOverHeader(isOver_) {
     isOver = isOver_;
@@ -26,7 +26,7 @@ window.onscroll = function() {
 //==========HOME SECTION==========//
 
 //Cycle Text ======
-const wordsList = [' Web Developer.', ' 2D Game Developer.', ' person.', ' 3D Game Developer.']
+const wordsList = [' Front-End Developer.', ' 2D Game Developer.', ' 3D Game Developer.', ' person.']
 const el = document.getElementById("typeWriter");
 
 let interval = 100;
@@ -85,4 +85,27 @@ for (child of document.getElementById("about-img").children) {
     let randomTime = Math.floor(Math.random() * 5);
     child.style.animation.animationDelay = toString(randomTime)+"s";
     child.style.animation = "floatImage 4s linear infinite";
+}
+
+//==========MY SKILLS SECTION==========//
+function HoverSkillButton() {
+    let child = document.getElementById("buttonContainerSkillsId").children;
+    
+    console.log(child);
+}
+function HideSkillsScreen()
+{
+    const skillContents = document.querySelectorAll('.skill-content');
+    skillContents.forEach(content => {
+        content.classList.remove('active');
+    });
+}
+function ShowSkillScreen(sectionName = "")
+{
+    // Remove a classe 'active' de todos os conteúdos
+    HideSkillsScreen();
+
+    // Define o conteúdo ativo
+    const activeContent = document.getElementById(sectionName);
+    activeContent.classList.add('active');
 }

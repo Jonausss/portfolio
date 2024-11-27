@@ -17,8 +17,8 @@
         <nav>
             <a href="#home" class="active prevent-selection header-button">Home</a>
             <a href="#about" class="prevent-selection header-button">About me</a>
-            <a href="#services" class="prevent-selection header-button">Services</a>
-            <a href="#portfolio" class="prevent-selection header-button">Portfólio</a>
+            <a href="#skills" class="prevent-selection header-button">My Skills</a>
+            <a href="#projects" class="prevent-selection header-button">Projects</a>
             <a href="#contact" class="prevent-selection header-button">Contact</a>
             <div class="icons">
                 <a href="https://github.com/Jonausss" class="prevent-selection header-icons"><i class="fa-brands fa-github social-icon"></i></a>
@@ -50,7 +50,70 @@
         </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="skills" id="skills">
+        <div class="btn-container" id="buttonContainerSkillsId">
+            <button type="button" class="button" onmouseover="HoverSkillButton()" onclick="ShowSkillScreen('gameDev')">
+                <h1>Game Developer</h1>
+            </button>
+            <button type="button" class="button" onclick="ShowSkillScreen('webDev')"><h1>Web Developer</h1></button>
+            <button type="button" class="button" onclick="ShowSkillScreen('other')"><h1>Unknown</h1></button>
+        </div>
+        <div class="skills-container">
+            <section class="skill-content" id="gameDev">
+                <div class="title">
+                    <h1>Game Developer</h1>
+                </div>
+                <div class="description">
+                    <p>textotextotexotexo</p>
+                </div>
+                <div class="skills">
+                    <button><i class="fa-brands fa-unity"></i></button>
+                    <button><i class="fa-brands fa-unity"></i></button>
+                    <button><i class="fa-brands fa-unity"></i></button>
+                    <button><i class="fa-brands fa-unity"></i></button>
+                </div>
+                <div class="exit">
+                    <button href="" onclick="HideSkillsScreen()" class="option"><i class="fa-solid fa-arrow-left"></i></button>
+                </div>
+            </section>
+            <section class="skill-content" id="webDev">
+                <div class="title">
+                    <h1>Web Developer</h1>
+                </div>
+                <div class="description">
+                    <p>textotextotexotexo</p>
+                </div>
+                <div class="skills">
+                    <button><i class="fa-brands fa-html5"></i></button>
+                    <button><i class="fa-brands fa-css3-alt"></i></button>
+                    <button><i class="fa-brands fa-js"></i></button>
+                    <button><i class="fa-brands fa-bootstrap"></i></button>
+                </div>
+                <div class="exit">
+                    <button href="" onclick="HideSkillsScreen()" class="option"><i class="fa-solid fa-arrow-left"></i></button>
+                </div>
+            </section>
+            <section class="skill-content" id="other">
+                <div class="title">
+                    <h1>???</h1>
+                </div>
+                <div class="description">
+                    <p>textotextotexotexo</p>
+                </div>
+                <div class="skills">
+                    <button><i class="fa-brands fa-unity"></i></button>
+                    <button><i class="fa-brands fa-unity"></i></button>
+                    <button><i class="fa-brands fa-unity"></i></button>
+                    <button><i class="fa-brands fa-unity"></i></button>
+                </div>
+                <div class="exit">
+                    <button href="" onclick="HideSkillsScreen()" class="option"><i class="fa-solid fa-arrow-left"></i></button>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="Projects" id="projects">
         
     </section>
 
